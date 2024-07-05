@@ -1,0 +1,11 @@
+ (T)Loader v.1
+  All rights reversed.
+  
+HOW TO COMPILE THIS BOOTLOADER FOR KERNEL?
+ 1. Go to Makefile and change the name for your operating
+    system, for example:
+		os.bin -> operating-system.bin
+ 2. Type 'make' to compiling.
+ 
+HOW TO CLEAR SOURCE CODE FOR A TEMP FILES?
+	Type 'make clean'.
