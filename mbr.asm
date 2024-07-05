@@ -1,8 +1,6 @@
 [bits 16]
 [org 0x7c00]
-%include "disk.asm"
-%include "gdt.asm"
-%include "switch-to-32bit.asm"
+
 KERNEL_OFFSET equ 0x1000
 mov [BOOT_DRIVE], dl
 mov bp, 0x9000
@@ -11,6 +9,9 @@ call load_kernel
 call switch_to_32bit
 jmp $
 
+%include "disk.asm"
+%include "gdt.asm"
+%include "switch-to-32bit.asm"
 
 [bits 16]
 load_kernel:
